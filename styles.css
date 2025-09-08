@@ -1,0 +1,146 @@
+/* styles.css */
+/* General Reset/Defaults */
+body {
+  margin: 0;
+  padding: 0;
+  color: #231f20; /* Charcoal black text for contrast (charity: water Thunder) */
+  font-family: 'Proxima Nova', Avenir, sans-serif;
+  line-height: 1.6;
+  background-color: #ffffff; /* overall page background */
+}
+
+/* Make images responsive */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Header (Logo section) */
+#top {
+  background: #fff;  /* white background for logo per branding guidelines */
+  padding: 10px 20px;
+  text-align: left;
+}
+#top .logo {
+  max-height: 50px;  /* limit logo height so it’s not too large */
+  width: auto;
+}
+
+/* Hero Section */
+#hero {
+  background: #2e9df7;  /* bright brand blue (trust & water) background */
+  color: #ffffff;       /* white text on blue for strong contrast */
+  text-align: center;
+  padding: 80px 20px;   /* generous top/bottom padding for space */
+}
+#hero h1 {
+  font-size: 2.5em;
+  margin: 0 0 20px;
+  font-weight: 700;
+}
+#hero .subheadline {
+  font-size: 1.1em;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+/* Story Section */
+#story {
+  background: #f9f9f9;  /* light neutral background for clarity */
+  padding: 60px 20px;
+}
+#story .story-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 40px;
+}
+#story .story-text {
+  flex: 1;
+}
+#story .story-text h2 {
+  font-size: 1.8em;
+  margin: 0 0 15px;
+  font-weight: 600;
+}
+#story .story-text p {
+  margin: 0 0 15px;
+  font-size: 1em;
+}
+#story .story-text p strong {
+  color: #231f20;
+}
+#story .story-text p em {
+  font-family: Georgia, serif; /* using Georgia for a subtle emphasis (formal tone) */
+}
+#story .story-image {
+  flex: 1;
+  text-align: center;
+}
+#story .story-image img {
+  border: none;
+  border-radius: 4px;
+  /* Optionally, add a subtle fade-in animation */
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease-out forwards;
+  animation-delay: 0.3s;
+}
+
+/* Call-to-Action Section */
+#cta {
+  background: #fff; /* white or very light background to make button stand out */
+  text-align: center;
+  padding: 60px 20px;
+}
+#cta h2 {
+  font-size: 1.8em;
+  margin: 0 0 10px;
+  font-weight: 600;
+  color: #231f20;
+}
+#cta p {
+  font-size: 1.1em;
+  margin: 0 0 30px;
+  color: #231f20;
+}
+#cta .donate-button {
+  display: inline-block;
+  background: #ffc907;   /* vibrant yellow (charity: water primary color) */
+  color: #231f20;        /* dark text for contrast on yellow */
+  text-decoration: none;
+  font-size: 1.1em;
+  font-weight: 600;
+  padding: 15px 30px;
+  border-radius: 4px;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+#cta .donate-button:hover,
+#cta .donate-button:focus {
+  background: #e5b800;   /* a slightly darker yellow on hover (for feedback) */
+  transform: scale(1.05);
+  color: #231f20;
+}
+
+/* Responsive Design: Stack columns on smaller screens */
+@media (max-width: 768px) {
+  #story .story-content {
+    flex-direction: column;
+    text-align: left;
+  }
+  #story .story-image {
+    margin: 20px 0;
+  }
+}
+
+/* Keyframe for fade-in animation (story image) */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
